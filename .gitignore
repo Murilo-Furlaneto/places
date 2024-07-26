@@ -9,13 +9,14 @@
 .history
 .svn/
 migrate_working_dir/
-
+.txt
 
 # IntelliJ related
 *.iml
 *.ipr
 *.iws
 .idea/
+.txt
 
 # The .vscode folder contains launch configuration and tasks you configure in
 # VS Code which you may wish to be included in version control, so this line
@@ -33,6 +34,7 @@ migrate_working_dir/
 .pub/
 /build/
 .txt
+.Location_Utils.dart
 
 # Symbolication related
 app.*.symbols
