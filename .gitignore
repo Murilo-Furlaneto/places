@@ -16,8 +16,9 @@ migrate_working_dir/
 *.ipr
 *.iws
 .idea/
-.txt
-
+*.txt
+places/senha_maps.txt
+places/lib/widgets/location_input.dart
 # The .vscode folder contains launch configuration and tasks you configure in
 # VS Code which you may wish to be included in version control, so this line
 # is commented out by default.
@@ -34,8 +35,8 @@ migrate_working_dir/
 .pub/
 /build/
 .txt
-.Location_Utils.dart
-
+places/lib/utils/location_utils.dart
+places/senha_maps.txt
 # Symbolication related
 app.*.symbols
 
