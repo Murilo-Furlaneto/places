@@ -11,7 +11,11 @@ class DbUtil {
           '''CREATE TABLE places (
           id TEXT PRIMARY KEY, 
           title TEXT,
-          image TEXT)''',
+          image TEXT,
+          latitude REAl, 
+          longitude REAl, 
+          adrdress TEXT
+          )''',
         );
       },
       version: 1,

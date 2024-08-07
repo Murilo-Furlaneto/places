@@ -29,19 +29,26 @@ class PlacesListScreen extends StatelessWidget {
                 child: const Center(
                   child: Text('Nenhum local cadastrado'),
                 ),
-                builder: (context, greatPlaces, child) =>
-                    greatPlaces.itemsCount == 0
-                        ? const Center(child: CircularProgressIndicator())
-                        : ListView.builder(
-                            itemCount: greatPlaces.itemsCount,
-                            itemBuilder: (cxt, i) => ListTile(
-                                  leading: CircleAvatar( 
-                                    backgroundImage: FileImage(
-                                        greatPlaces.itemByIndex(i).image),
-                                  ),
-                                  title: Text(greatPlaces.itemByIndex(i).title),
-                                  onTap: () {},
-                                ))),
+                builder: (context, greatPlaces, child) => greatPlaces
+                            .itemsCount ==
+                        0
+                    ? const Center(child: CircularProgressIndicator())
+                    : ListView.builder(
+                        itemCount: greatPlaces.itemsCount,
+                        itemBuilder: (cxt, i) => ListTile(
+                              leading: CircleAvatar(
+                                backgroundImage:
+                                    FileImage(greatPlaces.itemByIndex(i).image),
+                              ),
+                              title: Text(greatPlaces.itemByIndex(i).title),
+                              subtitle: Text(
+                                  greatPlaces.itemByIndex(i).location.address!),
+                              onTap: () {
+                                Navigator.of(context).pushNamed(
+                                    AppRoutes.PLACE_DETAIL,
+                                    arguments: greatPlaces.itemByIndex(i));
+                              },
+                            ))),
       ),
     );
   }
